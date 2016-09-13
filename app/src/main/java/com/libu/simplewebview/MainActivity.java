@@ -77,7 +77,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void doMagic(View view) {
 
-        mWebView.loadUrl("http://www.mocky.io/v2/57d73501100000f50fa06e1b");
+        String url =  mEditText.getText().toString();
+        if ( url == null)
+            url = "http://www.mocky.io/v2/57d73501100000f50fa06e1b";
+
+        mWebView.loadUrl(url);
     }
 
 
